@@ -1,0 +1,11 @@
+version: "3.1"
+
+services:
+  app:
+    image: oorangebuster/filesharing
+#    build: .
+    restart: always
+    ports:
+      - '8000:8000'
+    volumes:
+      - /opt/nfs/file/:/django-filesharing/public/static
