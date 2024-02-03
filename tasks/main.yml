@@ -15,25 +15,6 @@
     mode: 0777
   become: true
 
-#- name: Copy dockerfile
-#  template:
-#    src: "{{ role_path }}/files/Dockerfile"
-#    dest: "/tmp/"
-#    mode: 0777
-#  become: true
-
-#- name: Copy requirements.txt
-#  template:
-#    src: "{{ role_path }}/files/requirements.txt"
-#    dest: "/tmp/"
-#    mode: 0777
-#  become: true
-
-#- name: Pull docker image
-#  docker_image:
-#    name: oorangebuster/filesharing:latest
-#    source: pull
-
 - name: Start the containers
   docker_compose:
     project_src: "/tmp/"
